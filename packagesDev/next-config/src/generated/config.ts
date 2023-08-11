@@ -193,6 +193,10 @@ export type GraphCommerceConfig = {
    * This value is required even if you are configuring different values for each locale.
    */
   googleTagmanagerId?: InputMaybe<Scalars['String']['input']>;
+  /** Some explanations about the client ID. */
+  hygraphAppClientId?: InputMaybe<Scalars['String']['input']>;
+  /** Some explanations about the client secret. */
+  hygraphAppClientSecret?: InputMaybe<Scalars['String']['input']>;
   /**
    * The HyGraph endpoint.
    *
@@ -428,6 +432,8 @@ export function GraphCommerceConfigSchema(): z.ZodObject<Properties<GraphCommerc
     googleAnalyticsId: z.string().nullish(),
     googleRecaptchaKey: z.string().nullish(),
     googleTagmanagerId: z.string().nullish(),
+    hygraphAppClientId: z.string().nullish(),
+    hygraphAppClientSecret: z.string().nullish(),
     hygraphEndpoint: z.string().min(1),
     hygraphProjectId: z.string().nullish(),
     hygraphWriteAccessEndpoint: z.string().nullish(),

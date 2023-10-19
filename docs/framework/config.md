@@ -224,10 +224,6 @@ The Google Tagmanager ID to be used on the site.
 This value is required even if you are configuring different values for each
 locale.
 
-#### `hygraphProjectId: String`
-
-Hygraph Project ID. **Only used for migrations.**
-
 #### `hygraphAppClientId: String`
 
 Some explanations about the client ID.
@@ -235,6 +231,10 @@ Some explanations about the client ID.
 #### `hygraphAppClientSecret: String`
 
 Some explanations about the client secret.
+
+#### `hygraphProjectId: String`
+
+Hygraph Project ID. **Only used for migrations.**
 
 #### `hygraphWriteAccessEndpoint: String`
 
@@ -328,6 +328,15 @@ Configuration for the SidebarGallery component
 #### `wishlistHideForGuests: Boolean`
 
 Hide the wishlist functionality for guests.
+
+# <<<<<<< HEAD
+
+#### `wishlistIgnoreProductWishlistStatus: Boolean`
+
+Ignores whether a product is already in the wishlist, makes the toggle an add
+only.
+
+> > > > > > > 4c817adac ([GCOM-1108] yarn)
 
 #### `wishlistShowFeedbackMessage: Boolean`
 

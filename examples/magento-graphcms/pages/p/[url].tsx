@@ -197,7 +197,7 @@ export default ProductPage
 
 export const getStaticPaths: GetPageStaticPaths = async ({ locales = [] }) => {
   if (import.meta.graphCommerce.legacyProductRoute) return { paths: [], fallback: false }
-  if (process.env.NODE_ENV === 'development') return { paths: [], fallback: 'blocking' }
+  //if (process.env.NODE_ENV === 'development') return { paths: [], fallback: 'blocking' }
 
   const path = (locale: string) => getProductStaticPaths(graphqlSsrClient(locale), locale)
   const paths = (await Promise.all(locales.map(path))).flat(1)
@@ -217,8 +217,8 @@ export const getStaticProps: GetPageStaticProps = async ({ params, locale }) => 
   const productPage = staticClient.query({ query: ProductPage2Document, variables: { urlKey } })
   const layout = staticClient.query({ query: LayoutDocument, fetchPolicy: 'cache-first' })
 
-  const product = productPage.then((pp) =>
-    pp.data.products?.items?.find((p) => p?.url_key === urlKey),
+  const product = productPage.then(
+    (pp) => pp.data.products?.items?.find((p) => p?.url_key === urlKey),
   )
 
   const pages = hygraphPageContent(staticClient, 'product/global', product, true)

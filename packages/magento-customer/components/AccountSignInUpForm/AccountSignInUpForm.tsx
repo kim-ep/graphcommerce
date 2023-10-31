@@ -130,7 +130,7 @@ export function AccountSignInUpForm(props: AccountSignInUpFormProps) {
 
           <ApolloCustomerErrorAlert error={error} />
 
-          {(mode === 'email' || mode === 'session-expired') && (
+          {mode === 'email' && (
             <Box>
               <FormActions>
                 <Button
@@ -148,7 +148,7 @@ export function AccountSignInUpForm(props: AccountSignInUpFormProps) {
         </form>
       )}
 
-      {mode === 'signin' && (
+      {(mode === 'signin' || mode === 'session-expired') && (
         <Box>
           <SignInForm email={watch('email')} />
         </Box>

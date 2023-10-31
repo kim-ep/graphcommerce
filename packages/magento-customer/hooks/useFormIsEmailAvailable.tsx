@@ -1,3 +1,4 @@
+import { graphqlErrorByCategory } from '@graphcommerce/magento-graphql'
 import { useFormAutoSubmit, useFormGqlQuery } from '@graphcommerce/react-hook-form'
 import { useEffect, useState } from 'react'
 import { CustomerDocument } from './Customer.gql'
@@ -13,7 +14,7 @@ export type UseFormIsEmailAvailableProps = {
 export function useFormIsEmailAvailable(props: UseFormIsEmailAvailableProps) {
   const { email, onSubmitted } = props
   const { loggedIn, requireAuth } = useCustomerSession()
-  const customerQuery = useCustomerQuery(CustomerDocument)
+  const customerQuery = useCustomerQuery(CustomerDocument, { fetchPolicy: 'network-only' })
 
   const form = useFormGqlQuery(
     IsEmailAvailableDocument,
@@ -23,7 +24,7 @@ export function useFormIsEmailAvailable(props: UseFormIsEmailAvailableProps) {
   const { formState, data, handleSubmit } = form
 
   const submit = handleSubmit(onSubmitted || (() => {}))
-  const autoSubmitting = useFormAutoSubmit({ form, submit, forceInitialSubmit: true })
+  const autoSubmitting = useFormAutoSubmit({ form, submit, forceInitialSubmit: !loggedIn })
 
   const hasAccount = data?.isEmailAvailable?.is_email_available === false
 
@@ -33,9 +34,14 @@ export function useFormIsEmailAvailable(props: UseFormIsEmailAvailableProps) {
     loggedIn ? 'signedin' : 'email',
   )
 
+  const [, authError] = graphqlErrorByCategory({
+    category: 'graphql-authorization',
+    error: customerQuery.error,
+  })
+
   useEffect(() => {
     if (loggedIn) {
-      setMode('signedin')
+      setMode(authError || requireAuth ? 'session-expired' : 'signedin')
       return
     }
     if (isSubmitting) return
@@ -46,6 +52,7 @@ export function useFormIsEmailAvailable(props: UseFormIsEmailAvailableProps) {
     if (customerQuery.data?.customer && requireAuth)
       setMode(isSubmitSuccessful ? 'signin' : 'session-expired')
   }, [
+    authError,
     customerQuery.data?.customer,
     hasAccount,
     isDirty,

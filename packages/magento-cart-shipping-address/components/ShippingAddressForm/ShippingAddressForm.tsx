@@ -6,11 +6,21 @@ import {
   FormAutoSubmit,
 } from '@graphcommerce/ecommerce-ui'
 import { useQuery } from '@graphcommerce/graphql'
-import { useCartQuery, useFormGqlMutationCart } from '@graphcommerce/magento-cart'
+import {
+  ApolloCartErrorAlert,
+  useCartQuery,
+  useFormGqlMutationCart,
+} from '@graphcommerce/magento-cart'
 import { CartAddressFragment } from '@graphcommerce/magento-cart/components/CartAddress/CartAddress.gql'
-import { CustomerDocument, useCustomerQuery } from '@graphcommerce/magento-customer'
+import {
+  AddressFields,
+  CustomerDocument,
+  NameFields,
+  TelephoneField,
+  useCustomerQuery,
+} from '@graphcommerce/magento-customer'
 import { CountryRegionsDocument, StoreConfigDocument } from '@graphcommerce/magento-store'
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { isSameAddress } from '../../utils/isSameAddress'
 import { GetAddressesDocument } from './GetAddresses.gql'
 import { SetBillingAddressDocument } from './SetBillingAddress.gql'
@@ -19,10 +29,9 @@ import { SetShippingBillingAddressDocument } from './SetShippingBillingAddress.g
 
 export type ShippingAddressFormProps = Pick<UseFormComposeOptions, 'step'> & {
   ignoreCache?: boolean
-  children?: React.ReactNode[]
-}
+} & PropsWithChildren
 
-export const ShippingAddressForm = React.memo<ShippingAddressFormProps>((props) => {
+function Base(props: ShippingAddressFormProps) {
   const { step, children, ignoreCache = false } = props
   const { data: cartQuery } = useCartQuery(GetAddressesDocument)
   const { data: config } = useQuery(StoreConfigDocument)
@@ -105,8 +114,23 @@ export const ShippingAddressForm = React.memo<ShippingAddressFormProps>((props) 
 
   return (
     <FormProvider {...form}>
-      {children}
-      <FormAutoSubmit {...form} submit={submit} name={['postcode', 'countryCode', 'regionId']} />
+      {children ?? (
+        <>
+          <NameFields />
+          <AddressFields />
+          <TelephoneField />
+          <ApolloCartErrorAlert />
+          <FormAutoSubmit name={['postcode', 'countryCode', 'regionId']} />
+        </>
+      )}
     </FormProvider>
   )
+}
+
+export const ShippingAddressForm = Object.assign(React.memo(Base), {
+  NameFields,
+  AddressFields,
+  TelephoneField,
+  Error: ApolloCartErrorAlert,
+  Submit: FormAutoSubmit,
 })

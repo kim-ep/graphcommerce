@@ -18,6 +18,9 @@ _export(exports, {
     CompareVariantSchema: function() {
         return CompareVariantSchema;
     },
+    LoginMethodSchema: function() {
+        return LoginMethodSchema;
+    },
     ProductFiltersLayoutSchema: function() {
         return ProductFiltersLayoutSchema;
     },
@@ -40,6 +43,10 @@ const definedNonNullAnySchema = _zod.z.any().refine((v)=>isDefinedNonNullAny(v))
 const CompareVariantSchema = _zod.z.enum([
     "CHECKBOX",
     "ICON"
+]);
+const LoginMethodSchema = _zod.z.enum([
+    "IS_EMAIL_AVAILABLE",
+    "TOGGLE"
 ]);
 const ProductFiltersLayoutSchema = _zod.z.enum([
     "DEFAULT",
@@ -67,6 +74,7 @@ function GraphCommerceConfigSchema() {
         hygraphWriteAccessToken: _zod.z.string().nullish(),
         legacyProductRoute: _zod.z.boolean().nullish(),
         limitSsg: _zod.z.boolean().nullish(),
+        loginMethod: LoginMethodSchema.nullish(),
         magentoEndpoint: _zod.z.string().min(1),
         previewSecret: _zod.z.string().nullish(),
         productFiltersLayout: ProductFiltersLayoutSchema.nullish(),

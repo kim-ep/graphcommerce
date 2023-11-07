@@ -251,6 +251,8 @@ This should only be set to true if you use the /product/[url] AND /product/confi
 
 Limit the static generation of SSG when building
 
+#### `loginMethod: [LoginMethod](#LoginMethod)`
+
 #### `previewSecret: String`
 
 To enable next.js' preview mode, configure the secret you'd like to use.

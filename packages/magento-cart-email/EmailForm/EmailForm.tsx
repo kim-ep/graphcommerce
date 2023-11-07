@@ -71,7 +71,8 @@ const EmailFormBase = React.memo<EmailFormProps>((props) => {
             autoComplete: 'email',
             endAdornment: (
               <WaitForQueries waitFor={isEmailAvailable}>
-                {isEmailAvailable.data?.isEmailAvailable && (
+                {(isEmailAvailable.data?.isEmailAvailable ||
+                  import.meta.graphCommerce.loginMethod === 'TOGGLE') && (
                   <Button href='/account/signin' color='secondary' style={{ whiteSpace: 'nowrap' }}>
                     <Trans id='Sign in' />
                   </Button>

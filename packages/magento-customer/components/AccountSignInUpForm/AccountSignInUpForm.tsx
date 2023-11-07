@@ -18,16 +18,15 @@ export function AccountSignInUpForm(props: AccountSignInUpFormProps) {
   const { email, firstname = '' } = customerQuery.data?.customer || {}
   return (
     <>
-      {import.meta.graphCommerce.loginMethod === 'IS_EMAIL_AVAILABLE' && (
-        <AccountSignInUpIsEmailAvailableForm
+      {import.meta.graphCommerce.loginMethod === 'TOGGLE' ? (
+        <AccountSignInUpToggleForm
           sx={sx}
           titleContainerSx={titleContainerSx}
           email={email}
           firstName={firstname ?? ''}
         />
-      )}
-      {import.meta.graphCommerce.loginMethod === 'TOGGLE' && (
-        <AccountSignInUpToggleForm
+      ) : (
+        <AccountSignInUpIsEmailAvailableForm
           sx={sx}
           titleContainerSx={titleContainerSx}
           email={email}

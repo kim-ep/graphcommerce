@@ -10,6 +10,7 @@ const config = {
   magentoEndpoint: 'https://backend.reachdigital.dev/graphql',
   canonicalBaseUrl: 'https://graphcommerce.vercel.app',
   storefront: [{ locale: 'en', magentoStoreCode: 'en_US' }],
+    loginMethod: 'TOGGLE',
 }
 
 module.exports = config

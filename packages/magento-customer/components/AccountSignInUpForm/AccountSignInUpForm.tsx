@@ -4,6 +4,11 @@ import { useCustomerQuery } from '../../hooks/useCustomerQuery'
 import { AccountSignInUpIsEmailAvailableForm } from './AccountSignInUpIsEmailAvailableForm'
 import { AccountSignInUpToggleForm } from './AccountSignInUpToggleForm'
 
+// When the guestCheckout is disabled in Magento add loginMethod "TOGGLE" to your config to enable the toggle login / register flow which is mandatory.
+// Toggle flow also disables the isEmailAvailable call to the magento backend.
+
+// Default is set to IS_EMAIL_AVAILABLE
+
 export type AccountSignInUpFormProps = { sx?: SxProps<Theme> }
 
 const titleContainerSx: SxProps<Theme> = (theme) => ({

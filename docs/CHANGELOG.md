@@ -1,5 +1,21 @@
 # Change Log
 
+## 7.1.0-canary.36
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+## 7.1.0-canary.31
+
+### Minor Changes
+
+- [#2106](https://github.com/graphcommerce-org/graphcommerce/pull/2106) [`9f8c3cac2`](https://github.com/graphcommerce-org/graphcommerce/commit/9f8c3cac214006315055f37cf8d4a783eb99a7ec) - Split off Magento known issues to separate page ([@hnsr](https://github.com/hnsr))
+
 ## 7.1.0-canary.30
 
 ## 7.1.0-canary.29

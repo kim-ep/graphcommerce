@@ -20,7 +20,7 @@ export function AccountSignInUpForm(props: AccountSignInUpFormProps) {
   const { sx = [] } = props
   const customerQuery = useCustomerQuery(CustomerDocument)
 
-  const { email, firstname = '' } = customerQuery.data?.customer || {}
+  const { email, firstname } = customerQuery.data?.customer || {}
 
   return (
     <>

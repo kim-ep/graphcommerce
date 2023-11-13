@@ -19,7 +19,6 @@ export function AccountSignInUpIsEmailAvailableForm(
   props: AccountSignInUpIsEmailAvailableFormProps,
 ) {
   const { sx = [], titleContainerSx, email, firstName } = props
-  console.log(email)
   const { mode, form, autoSubmitting, submit } = useFormIsEmailAvailable({ email })
   return (
     <FormProvider {...form}>

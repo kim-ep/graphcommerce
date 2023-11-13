@@ -1,8 +1,7 @@
 import { extendableComponent } from '@graphcommerce/next-ui'
-import { Form, FormProvider, useForm } from '@graphcommerce/react-hook-form'
+import { FormProvider, useForm } from '@graphcommerce/react-hook-form'
 import { SxProps, Theme } from '@mui/material'
 import { AccountSignInUpFormComponents } from './AccountSignInUpFormComponents'
-import { useRouter } from 'next/router'
 
 export type AccountSignInUpToggleFormProps = {
   sx?: SxProps<Theme>

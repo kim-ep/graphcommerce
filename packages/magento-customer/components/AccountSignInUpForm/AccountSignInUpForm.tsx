@@ -1,5 +1,4 @@
 import { SxProps, Theme } from '@mui/material'
-import { useRouter } from 'next/router'
 import { CustomerDocument } from '../../hooks'
 import { useCustomerQuery } from '../../hooks/useCustomerQuery'
 import { AccountSignInUpIsEmailAvailableForm } from './AccountSignInUpIsEmailAvailableForm'

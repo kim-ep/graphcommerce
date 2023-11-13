@@ -17,11 +17,9 @@ const { classes } = extendableComponent('AccountSignInUpToggleForm', parts)
 export function AccountSignInUpToggleForm(props: AccountSignInUpToggleFormProps) {
   const { sx = [], titleContainerSx, email, firstName } = props
 
-  const router = useRouter()
-
   const form = useForm({
     defaultValues: {
-      email: router.query.email,
+      email,
     },
   })
 

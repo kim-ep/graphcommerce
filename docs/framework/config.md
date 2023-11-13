@@ -284,13 +284,13 @@ Example: '/product/'
 Allow the site to be indexed by search engines.
 If false, the robots.txt file will be set to disallow all.
 
+#### `sidebarGallery: [SidebarGalleryConfig](#SidebarGalleryConfig)`
+
+Configuration for the SidebarGallery component
+
 #### `wishlistHideForGuests: Boolean`
 
 Hide the wishlist functionality for guests.
-
-#### `wishlistIgnoreProductWishlistStatus: Boolean`
-
-Ignores whether a product is already in the wishlist, makes the toggle an add only.
 
 #### `wishlistShowFeedbackMessage: Boolean`
 
@@ -401,3 +401,11 @@ provided that the gallery images for the selected variant differ from the curren
 When a variant is selected the URL of the product will be changed in the address bar.
 
 This only happens when the actual variant is can be accessed by the URL.
+
+### SidebarGalleryConfig
+
+SidebarGalleryConfig will contain all configuration values for the Sidebar Gallery component.
+
+#### `paginationVariant: [SidebarGalleryPaginationVariant](#SidebarGalleryPaginationVariant)`
+
+Variant used for the pagination

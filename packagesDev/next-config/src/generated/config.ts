@@ -289,12 +289,12 @@ export type GraphCommerceConfig = {
    * If false, the robots.txt file will be set to disallow all.
    */
   robotsAllow?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Configuration for the SidebarGallery component */
+  sidebarGallery?: InputMaybe<SidebarGalleryConfig>;
   /** All storefront configuration for the project */
   storefront: Array<GraphCommerceStorefrontConfig>;
   /** Hide the wishlist functionality for guests. */
   wishlistHideForGuests?: InputMaybe<Scalars['Boolean']['input']>;
-  /** Ignores whether a product is already in the wishlist, makes the toggle an add only. */
-  wishlistIgnoreProductWishlistStatus?: InputMaybe<Scalars['Boolean']['input']>;
   /** Show a message when the product is added to the wishlist. */
   wishlistShowFeedbackMessage?: InputMaybe<Scalars['Boolean']['input']>;
 };
@@ -395,6 +395,17 @@ export type ProductFiltersLayout =
   | 'DEFAULT'
   | 'SIDEBAR';
 
+/** SidebarGalleryConfig will contain all configuration values for the Sidebar Gallery component. */
+export type SidebarGalleryConfig = {
+  /** Variant used for the pagination */
+  paginationVariant?: InputMaybe<SidebarGalleryPaginationVariant>;
+};
+
+/** Enumeration of all possible positions for the sidebar gallery thumbnails. */
+export type SidebarGalleryPaginationVariant =
+  | 'DOTS'
+  | 'THUMBNAILS_BOTTOM';
+
 
 type Properties<T> = Required<{
   [K in keyof T]: z.ZodType<T[K], any, T[K]>;
@@ -411,6 +422,8 @@ export const CompareVariantSchema = z.enum(['CHECKBOX', 'ICON']);
 export const LoginMethodSchema = z.enum(['IS_EMAIL_AVAILABLE', 'TOGGLE']);
 
 export const ProductFiltersLayoutSchema = z.enum(['DEFAULT', 'SIDEBAR']);
+
+export const SidebarGalleryPaginationVariantSchema = z.enum(['DOTS', 'THUMBNAILS_BOTTOM']);
 
 export function GraphCommerceConfigSchema(): z.ZodObject<Properties<GraphCommerceConfig>> {
   return z.object({
@@ -441,9 +454,9 @@ export function GraphCommerceConfigSchema(): z.ZodObject<Properties<GraphCommerc
     productFiltersPro: z.boolean().nullish(),
     productRoute: z.string().nullish(),
     robotsAllow: z.boolean().nullish(),
+    sidebarGallery: SidebarGalleryConfigSchema().nullish(),
     storefront: z.array(GraphCommerceStorefrontConfigSchema()),
     wishlistHideForGuests: z.boolean().nullish(),
-    wishlistIgnoreProductWishlistStatus: z.boolean().nullish(),
     wishlistShowFeedbackMessage: z.boolean().nullish()
   })
 }
@@ -477,5 +490,11 @@ export function MagentoConfigurableVariantValuesSchema(): z.ZodObject<Properties
     content: z.boolean().nullish(),
     gallery: z.boolean().nullish(),
     url: z.boolean().nullish()
+  })
+}
+
+export function SidebarGalleryConfigSchema(): z.ZodObject<Properties<SidebarGalleryConfig>> {
+  return z.object({
+    paginationVariant: SidebarGalleryPaginationVariantSchema.nullish()
   })
 }

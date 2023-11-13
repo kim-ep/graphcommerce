@@ -1,4 +1,5 @@
 import { SxProps, Theme } from '@mui/material'
+import { useRouter } from 'next/router'
 import { CustomerDocument } from '../../hooks'
 import { useCustomerQuery } from '../../hooks/useCustomerQuery'
 import { AccountSignInUpIsEmailAvailableForm } from './AccountSignInUpIsEmailAvailableForm'
@@ -21,6 +22,7 @@ export function AccountSignInUpForm(props: AccountSignInUpFormProps) {
   const customerQuery = useCustomerQuery(CustomerDocument)
 
   const { email, firstname = '' } = customerQuery.data?.customer || {}
+
   return (
     <>
       {import.meta.graphCommerce.loginMethod === 'TOGGLE' ? (

@@ -1,7 +1,8 @@
 import { extendableComponent } from '@graphcommerce/next-ui'
-import { FormProvider, useForm } from '@graphcommerce/react-hook-form'
+import { Form, FormProvider, useForm } from '@graphcommerce/react-hook-form'
 import { SxProps, Theme } from '@mui/material'
 import { AccountSignInUpFormComponents } from './AccountSignInUpFormComponents'
+import { useRouter } from 'next/router'
 
 export type AccountSignInUpToggleFormProps = {
   sx?: SxProps<Theme>
@@ -16,9 +17,11 @@ const { classes } = extendableComponent('AccountSignInUpToggleForm', parts)
 export function AccountSignInUpToggleForm(props: AccountSignInUpToggleFormProps) {
   const { sx = [], titleContainerSx, email, firstName } = props
 
+  const router = useRouter()
+
   const form = useForm({
     defaultValues: {
-      email,
+      email: router.query.email,
     },
   })
 

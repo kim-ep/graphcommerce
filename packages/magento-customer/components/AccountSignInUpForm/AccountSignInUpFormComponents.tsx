@@ -11,7 +11,7 @@ import {
 import { useFormContext } from '@graphcommerce/react-hook-form'
 import { Trans } from '@lingui/react'
 import { Box, CircularProgress, Link, SxProps, Theme, Typography } from '@mui/material'
-import router from 'next/router'
+import router, { useRouter } from 'next/router'
 import { BaseSyntheticEvent, useEffect, useState } from 'react'
 import { useCustomerSession } from '../../hooks'
 import { SignInForm } from '../SignInForm/SignInForm'
@@ -45,7 +45,7 @@ export function AccountSignInUpFormComponents(props: AccountSignInUpFormComponen
 
   const form = useFormContext()
 
-  const { formState, watch, control } = form
+  const { formState, watch, control, setValue, trigger } = form
 
   const disableFields = formState.isSubmitting && !autoSubmitting
 
@@ -53,12 +53,20 @@ export function AccountSignInUpFormComponents(props: AccountSignInUpFormComponen
 
   const [mode, setMode] = useState(loginMode)
 
+  const emailRouter = useRouter()
+
+  const emailFromParams = emailRouter.query.email as string
   useEffect(() => {
+    if (!email && emailFromParams) {
+      setValue('email', emailFromParams)
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      trigger('email')
+    }
     setMode(loginMode)
     if (loggedIn) {
       setMode('signedin')
     }
-  }, [loggedIn, loginMode])
+  }, [email, emailFromParams, loggedIn, loginMode, setValue, trigger])
 
   return (
     <FormDiv sx={sx} className={classes.root}>

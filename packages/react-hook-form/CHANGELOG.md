@@ -1,5 +1,15 @@
 # Change Log
 
+## 7.1.0
+
+### Patch Changes
+
+- [#2093](https://github.com/graphcommerce-org/graphcommerce/pull/2093) [`112b041f0`](https://github.com/graphcommerce-org/graphcommerce/commit/112b041f01a33fbd521ce3eb3955844f96b29917) - Created a new experimental mutation abort feature inside `useFormGql`. This will allow redundant mutations to be canceled. This feature can be enabled via the `experimental_useV2` prop on the `useFormGql` component ([@mikekeehnen](https://github.com/mikekeehnen))
+
+- [#2007](https://github.com/graphcommerce-org/graphcommerce/pull/2007) [`f59c27660`](https://github.com/graphcommerce-org/graphcommerce/commit/f59c276605f9ed649d1197a9ba0e3f12d7c6d026) - Reconstruct crosssells behaviour. Add submitted variables & showSuccess to RHF ([@JoshuaS98](https://github.com/JoshuaS98))
+
+- [#2097](https://github.com/graphcommerce-org/graphcommerce/pull/2097) [`cdc89cedb`](https://github.com/graphcommerce-org/graphcommerce/commit/cdc89cedb9eb4d37a2c37497689e74ff6df21bf6) - Set default value of `experimental_v2` to false in `useFormGql`, since we don't want an experimental feature as default ([@mikekeehnen](https://github.com/mikekeehnen))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

@@ -1,5 +1,31 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`13e23e426`](https://github.com/graphcommerce-org/graphcommerce/commit/13e23e4265bac70fb4d0830e4661019e71ce299f) - Wishlist will now support configurable products and uses the ActionCardLayout ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2083](https://github.com/graphcommerce-org/graphcommerce/pull/2083) [`ca493c7b2`](https://github.com/graphcommerce-org/graphcommerce/commit/ca493c7b208b8526c1109695d54bad7b2956a8bd) - Filters which are not yet applied and which option has 0 as item count will not be shown anymore. ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2081](https://github.com/graphcommerce-org/graphcommerce/pull/2081) [`22454110a`](https://github.com/graphcommerce-org/graphcommerce/commit/22454110a99de36a35e6f4b08c584b0165db32f4) - Removed the duplicate omitted name attribute from AddToCartQuantityProps ([@mikekeehnen](https://github.com/mikekeehnen))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`8d4f1ef00`](https://github.com/graphcommerce-org/graphcommerce/commit/8d4f1ef00bd7a8b8ca3be46302ce3959eae33a23) - When a product has a discount price, render that on the product page ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2058](https://github.com/graphcommerce-org/graphcommerce/pull/2058) [`16dc48895`](https://github.com/graphcommerce-org/graphcommerce/commit/16dc4889543106238b1a87694e75586e4c1a787c) - Provide instant feedback on availble attribute options when making a selection on a configurable product ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`0d2cb22a5`](https://github.com/graphcommerce-org/graphcommerce/commit/0d2cb22a58451d40102981263209aacb93016c76) - Removed unwanted space below ProductListItem images caused by line-height. Images are now perfectly square as expected. ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2007](https://github.com/graphcommerce-org/graphcommerce/pull/2007) [`f59c27660`](https://github.com/graphcommerce-org/graphcommerce/commit/f59c276605f9ed649d1197a9ba0e3f12d7c6d026) - Reconstruct crosssells behaviour. Add submitted variables & showSuccess to RHF ([@JoshuaS98](https://github.com/JoshuaS98))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`0335dd941`](https://github.com/graphcommerce-org/graphcommerce/commit/0335dd9417b8fe1c4f1009dad354b9edab892b9f) - The product page will now also load all information that a ProductListItem will load ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2076](https://github.com/graphcommerce-org/graphcommerce/pull/2076) [`f860e6860`](https://github.com/graphcommerce-org/graphcommerce/commit/f860e68603526a15dcf2567f4ca57230423ef5c3) - fix maxWidth on productPageDescription ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`5f4455b1c`](https://github.com/graphcommerce-org/graphcommerce/commit/5f4455b1cccddf1501f0279e5ca2d9277a07ff07) - Added Skeleton render type to productListRenderer ([@bramvanderholst](https://github.com/bramvanderholst))
+
 ## 7.1.0-canary.45
 
 ### Patch Changes

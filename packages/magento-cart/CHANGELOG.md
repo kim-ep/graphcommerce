@@ -1,5 +1,19 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2075](https://github.com/graphcommerce-org/graphcommerce/pull/2075) [`34dee456e`](https://github.com/graphcommerce-org/graphcommerce/commit/34dee456ef686174b62e604911a0ba84cbd3d002) - Added ordernumber to succes page. ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2018](https://github.com/graphcommerce-org/graphcommerce/pull/2018) [`750aa6a72`](https://github.com/graphcommerce-org/graphcommerce/commit/750aa6a72710869d54244467253212e551d335e0) - Changed the layout of the succes page. We are using ActionCards right now to match the design of the cart. ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2089](https://github.com/graphcommerce-org/graphcommerce/pull/2089) [`4b6bbf065`](https://github.com/graphcommerce-org/graphcommerce/commit/4b6bbf06572c71e266cc2407e4533833712898e2) - The CartFab wouldn't reflect that there are items in the cart when a customer refreshes the page after adding a product to the cart, without viewing the cart. ([@carlocarels90](https://github.com/carlocarels90))
+
+- [#2107](https://github.com/graphcommerce-org/graphcommerce/pull/2107) [`2f5150456`](https://github.com/graphcommerce-org/graphcommerce/commit/2f5150456eabcce410ad8a0f1cbebeedabb6564c) - feat(GCOM-1237): remember email adress when going from checkout to si… ([@FrankHarland](https://github.com/FrankHarland))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

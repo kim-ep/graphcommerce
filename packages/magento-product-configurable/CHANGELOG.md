@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`13e23e426`](https://github.com/graphcommerce-org/graphcommerce/commit/13e23e4265bac70fb4d0830e4661019e71ce299f) - Wishlist will now support configurable products and uses the ActionCardLayout ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`bc9085275`](https://github.com/graphcommerce-org/graphcommerce/commit/bc90852755479e48d25a370deccce0ca74e1e48f) - When selecitng a non-existing option on a configurable product page, the price would not update. ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2058](https://github.com/graphcommerce-org/graphcommerce/pull/2058) [`16dc48895`](https://github.com/graphcommerce-org/graphcommerce/commit/16dc4889543106238b1a87694e75586e4c1a787c) - Provide instant feedback on availble attribute options when making a selection on a configurable product ([@FrankHarland](https://github.com/FrankHarland))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

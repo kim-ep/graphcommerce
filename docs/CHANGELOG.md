@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2106](https://github.com/graphcommerce-org/graphcommerce/pull/2106) [`9f8c3cac2`](https://github.com/graphcommerce-org/graphcommerce/commit/9f8c3cac214006315055f37cf8d4a783eb99a7ec) - Split off Magento known issues to separate page ([@hnsr](https://github.com/hnsr))
+
+### Patch Changes
+
+- [#2112](https://github.com/graphcommerce-org/graphcommerce/pull/2112) [`15a203737`](https://github.com/graphcommerce-org/graphcommerce/commit/15a2037372cd615602d3e2f3deedba9766fc172c) - Make the "Search" string translatable and fix typo. ([@carlocarels90](https://github.com/carlocarels90))
+
+- [#2104](https://github.com/graphcommerce-org/graphcommerce/pull/2104) [`d0f1f5a2d`](https://github.com/graphcommerce-org/graphcommerce/commit/d0f1f5a2d1380d1c3931e23218924d5e8b1fc60d) - Document workaround/patch for broken cart error handling with Magento 2.4.6. ([@hnsr](https://github.com/hnsr))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

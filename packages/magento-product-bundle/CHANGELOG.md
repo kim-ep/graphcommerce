@@ -1,5 +1,15 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`13e23e426`](https://github.com/graphcommerce-org/graphcommerce/commit/13e23e4265bac70fb4d0830e4661019e71ce299f) - Wishlist will now support configurable products and uses the ActionCardLayout ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2028](https://github.com/graphcommerce-org/graphcommerce/pull/2028) [`dd5499dae`](https://github.com/graphcommerce-org/graphcommerce/commit/dd5499daedb0a5cd38081f2bd7892df40bb23e16) - Fixed bug where you could only select 1 as quantity for bundled products ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

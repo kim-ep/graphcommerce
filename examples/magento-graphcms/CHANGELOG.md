@@ -1,5 +1,19 @@
 # Change Log
 
+## 7.1.0
+
+### Patch Changes
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`7664e4587`](https://github.com/graphcommerce-org/graphcommerce/commit/7664e45873142078eb6681fd1bb268db8035cb2e) - Added ProductScroller component with built-in skeleton loader ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2112](https://github.com/graphcommerce-org/graphcommerce/pull/2112) [`15a203737`](https://github.com/graphcommerce-org/graphcommerce/commit/15a2037372cd615602d3e2f3deedba9766fc172c) - Make the "Search" string translatable and fix typo. ([@carlocarels90](https://github.com/carlocarels90))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`eb29cbef5`](https://github.com/graphcommerce-org/graphcommerce/commit/eb29cbef56f8f7275ffe6760ef5e9f8d2598c7c4) - Added recently viewed products to product pages ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2103](https://github.com/graphcommerce-org/graphcommerce/pull/2103) [`23392babb`](https://github.com/graphcommerce-org/graphcommerce/commit/23392babb89ce3e77dc98713ee897f72ab66d6a1) - feat(GCOM-1215): prevent + / - qty buttons from overlapping the “Star… ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`5f4455b1c`](https://github.com/graphcommerce-org/graphcommerce/commit/5f4455b1cccddf1501f0279e5ca2d9277a07ff07) - Added Skeleton render type to productListRenderer ([@bramvanderholst](https://github.com/bramvanderholst))
+
 ## 7.1.0-canary.45
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2018](https://github.com/graphcommerce-org/graphcommerce/pull/2018) [`750aa6a72`](https://github.com/graphcommerce-org/graphcommerce/commit/750aa6a72710869d54244467253212e551d335e0) - Changed the layout of the succes page. We are using ActionCards right now to match the design of the cart. ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2079](https://github.com/graphcommerce-org/graphcommerce/pull/2079) [`98799e089`](https://github.com/graphcommerce-org/graphcommerce/commit/98799e0892d430f32b7599a351cf49a37cfc072c) - Updated styling SelectedCustomizableOptions, so items get more spacing and elements accessable via sx prop ([@mikekeehnen](https://github.com/mikekeehnen))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

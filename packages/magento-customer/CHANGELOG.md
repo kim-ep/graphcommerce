@@ -1,5 +1,21 @@
 # Change Log
 
+## 7.1.0
+
+### Patch Changes
+
+- [#2091](https://github.com/graphcommerce-org/graphcommerce/pull/2091) [`5b865d376`](https://github.com/graphcommerce-org/graphcommerce/commit/5b865d376fe3b830a03af15b56986a0448af4987) - Update OrderDetails and styling ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`a5c65506a`](https://github.com/graphcommerce-org/graphcommerce/commit/a5c65506a7e72bd9ea101f665ce201e82396c63c) - Allow passing skip to useCustomerQuery and useGuestQuery ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2107](https://github.com/graphcommerce-org/graphcommerce/pull/2107) [`2f5150456`](https://github.com/graphcommerce-org/graphcommerce/commit/2f5150456eabcce410ad8a0f1cbebeedabb6564c) - feat(GCOM-1237): remember email adress when going from checkout to si… ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#2087](https://github.com/graphcommerce-org/graphcommerce/pull/2087) [`42c33c6e3`](https://github.com/graphcommerce-org/graphcommerce/commit/42c33c6e3adceee400bc9f10ec416731db9279c0) - fix email update snackbar styling ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2082](https://github.com/graphcommerce-org/graphcommerce/pull/2082) [`2e8d19ccc`](https://github.com/graphcommerce-org/graphcommerce/commit/2e8d19cccd305f0e8eb4c29d05161af6cfdb9d84) - Add current email translation ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2098](https://github.com/graphcommerce-org/graphcommerce/pull/2098) [`ca4547224`](https://github.com/graphcommerce-org/graphcommerce/commit/ca45472246e084f4b88f91bc700351e29c63e0e2) - Fix EditAddressForm when addition field is null or undefined ([@JoshuaS98](https://github.com/JoshuaS98))
+
 ## 7.1.0-canary.45
 
 ## 7.1.0-canary.38

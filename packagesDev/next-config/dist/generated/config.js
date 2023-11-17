@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
 /* eslint-disable */ "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -10,9 +13,24 @@ function _export(target, all) {
     });
 }
 _export(exports, {
+<<<<<<< HEAD
     CompareVariantSchema: function() {
         return CompareVariantSchema;
     },
+=======
+    isDefinedNonNullAny: function() {
+        return isDefinedNonNullAny;
+    },
+    definedNonNullAnySchema: function() {
+        return definedNonNullAnySchema;
+    },
+    CompareVariantSchema: function() {
+        return CompareVariantSchema;
+    },
+    ProductFiltersLayoutSchema: function() {
+        return ProductFiltersLayoutSchema;
+    },
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
     GraphCommerceConfigSchema: function() {
         return GraphCommerceConfigSchema;
     },
@@ -24,6 +42,7 @@ _export(exports, {
     },
     MagentoConfigurableVariantValuesSchema: function() {
         return MagentoConfigurableVariantValuesSchema;
+<<<<<<< HEAD
     },
     ProductFiltersLayoutSchema: function() {
         return ProductFiltersLayoutSchema;
@@ -39,6 +58,8 @@ _export(exports, {
     },
     isDefinedNonNullAny: function() {
         return isDefinedNonNullAny;
+=======
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
     }
 });
 const _zod = require("zod");
@@ -52,6 +73,7 @@ const ProductFiltersLayoutSchema = _zod.z.enum([
     "DEFAULT",
     "SIDEBAR"
 ]);
+<<<<<<< HEAD
 const SidebarGalleryPaginationVariantSchema = _zod.z.enum([
     "DOTS",
     "THUMBNAILS_BOTTOM"
@@ -68,25 +90,33 @@ exports.definedNonNullAnySchema = zod_1.z.any().refine((v) => (0, exports.isDefi
 exports.CompareVariantSchema = zod_1.z.enum(['CHECKBOX', 'ICON']);
 exports.ProductFiltersLayoutSchema = zod_1.z.enum(['DEFAULT', 'SIDEBAR']);
 >>>>>>> 9dfd43ab4 ([GCOM-1108] rm unnecessary configs, host app on solo next environment, cleanup unnecessary packages,)
+=======
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
 function GraphCommerceConfigSchema() {
-    return zod_1.z.object({
-        canonicalBaseUrl: zod_1.z.string().min(1),
-        cartDisplayPricesInclTax: zod_1.z.boolean().nullish(),
-        compare: zod_1.z.boolean().nullish(),
-        compareVariant: exports.CompareVariantSchema.nullish(),
-        configurableVariantForSimple: zod_1.z.boolean().nullish(),
+    return _zod.z.object({
+        canonicalBaseUrl: _zod.z.string().min(1),
+        cartDisplayPricesInclTax: _zod.z.boolean().nullish(),
+        compare: _zod.z.boolean().nullish(),
+        compareVariant: CompareVariantSchema.nullish(),
+        configurableVariantForSimple: _zod.z.boolean().nullish(),
         configurableVariantValues: MagentoConfigurableVariantValuesSchema().nullish(),
-        crossSellsHideCartItems: zod_1.z.boolean().nullish(),
-        crossSellsRedirectItems: zod_1.z.boolean().nullish(),
-        customerRequireEmailConfirmation: zod_1.z.boolean().nullish(),
+        crossSellsHideCartItems: _zod.z.boolean().nullish(),
+        crossSellsRedirectItems: _zod.z.boolean().nullish(),
+        customerRequireEmailConfirmation: _zod.z.boolean().nullish(),
         debug: GraphCommerceDebugConfigSchema().nullish(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
         demoMode: _zod.z.boolean().nullish(),
         googleAnalyticsId: _zod.z.string().nullish(),
         googleRecaptchaKey: _zod.z.string().nullish(),
         googleTagmanagerId: _zod.z.string().nullish(),
+<<<<<<< HEAD
         hygraphAppClientId: _zod.z.string().nullish(),
         hygraphAppClientSecret: _zod.z.string().nullish(),
+=======
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
         hygraphEndpoint: _zod.z.string().min(1),
         hygraphProjectId: _zod.z.string().nullish(),
         hygraphWriteAccessEndpoint: _zod.z.string().nullish(),
@@ -99,6 +129,7 @@ function GraphCommerceConfigSchema() {
         productFiltersPro: _zod.z.boolean().nullish(),
         productRoute: _zod.z.string().nullish(),
         robotsAllow: _zod.z.boolean().nullish(),
+<<<<<<< HEAD
         sidebarGallery: SidebarGalleryConfigSchema().nullish(),
         storefront: _zod.z.array(GraphCommerceStorefrontConfigSchema()),
         wishlistHideForGuests: _zod.z.boolean().nullish(),
@@ -125,40 +156,44 @@ function GraphCommerceConfigSchema() {
         wishlistIgnoreProductWishlistStatus: zod_1.z.boolean().nullish(),
         wishlistShowFeedbackMessage: zod_1.z.boolean().nullish()
 >>>>>>> 9dfd43ab4 ([GCOM-1108] rm unnecessary configs, host app on solo next environment, cleanup unnecessary packages,)
+=======
+        storefront: _zod.z.array(GraphCommerceStorefrontConfigSchema()),
+        wishlistHideForGuests: _zod.z.boolean().nullish(),
+        wishlistIgnoreProductWishlistStatus: _zod.z.boolean().nullish(),
+        wishlistShowFeedbackMessage: _zod.z.boolean().nullish()
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
     });
 }
-exports.GraphCommerceConfigSchema = GraphCommerceConfigSchema;
 function GraphCommerceDebugConfigSchema() {
-    return zod_1.z.object({
-        pluginStatus: zod_1.z.boolean().nullish(),
-        webpackCircularDependencyPlugin: zod_1.z.boolean().nullish(),
-        webpackDuplicatesPlugin: zod_1.z.boolean().nullish()
+    return _zod.z.object({
+        pluginStatus: _zod.z.boolean().nullish(),
+        webpackCircularDependencyPlugin: _zod.z.boolean().nullish(),
+        webpackDuplicatesPlugin: _zod.z.boolean().nullish()
     });
 }
-exports.GraphCommerceDebugConfigSchema = GraphCommerceDebugConfigSchema;
 function GraphCommerceStorefrontConfigSchema() {
-    return zod_1.z.object({
-        canonicalBaseUrl: zod_1.z.string().nullish(),
-        cartDisplayPricesInclTax: zod_1.z.boolean().nullish(),
-        defaultLocale: zod_1.z.boolean().nullish(),
-        domain: zod_1.z.string().nullish(),
-        googleAnalyticsId: zod_1.z.string().nullish(),
-        googleRecaptchaKey: zod_1.z.string().nullish(),
-        googleTagmanagerId: zod_1.z.string().nullish(),
-        hygraphLocales: zod_1.z.array(zod_1.z.string().min(1)).nullish(),
-        linguiLocale: zod_1.z.string().nullish(),
-        locale: zod_1.z.string().min(1),
-        magentoStoreCode: zod_1.z.string().min(1)
+    return _zod.z.object({
+        canonicalBaseUrl: _zod.z.string().nullish(),
+        cartDisplayPricesInclTax: _zod.z.boolean().nullish(),
+        defaultLocale: _zod.z.boolean().nullish(),
+        domain: _zod.z.string().nullish(),
+        googleAnalyticsId: _zod.z.string().nullish(),
+        googleRecaptchaKey: _zod.z.string().nullish(),
+        googleTagmanagerId: _zod.z.string().nullish(),
+        hygraphLocales: _zod.z.array(_zod.z.string().min(1)).nullish(),
+        linguiLocale: _zod.z.string().nullish(),
+        locale: _zod.z.string().min(1),
+        magentoStoreCode: _zod.z.string().min(1)
     });
 }
-exports.GraphCommerceStorefrontConfigSchema = GraphCommerceStorefrontConfigSchema;
 function MagentoConfigurableVariantValuesSchema() {
-    return zod_1.z.object({
-        content: zod_1.z.boolean().nullish(),
-        gallery: zod_1.z.boolean().nullish(),
-        url: zod_1.z.boolean().nullish()
+    return _zod.z.object({
+        content: _zod.z.boolean().nullish(),
+        gallery: _zod.z.boolean().nullish(),
+        url: _zod.z.boolean().nullish()
     });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 function SidebarGalleryConfigSchema() {
     return _zod.z.object({
@@ -168,3 +203,5 @@ function SidebarGalleryConfigSchema() {
 =======
 exports.MagentoConfigurableVariantValuesSchema = MagentoConfigurableVariantValuesSchema;
 >>>>>>> 9dfd43ab4 ([GCOM-1108] rm unnecessary configs, host app on solo next environment, cleanup unnecessary packages,)
+=======
+>>>>>>> 6ccab5899 ([GCOM-1108] run codegen)
